@@ -78,6 +78,12 @@ select * from produto_categoria;
 select * from departamento;
 select * from produto;
 select * from pedido;
+select * from categoria_produto;
+select * from fornecedor_produto;
+select valor from produto where valor > 50;
+select status_pedido from pedido where status_pedido = 'enviado';
+select descricao from funcao where descricao = 'coleta de pedido';
+select endereco_cidade from loja where endereco_cidade = 'recife';
 
 
 insert into empregado (nome, data_nascimento)
@@ -98,4 +104,17 @@ values (1, '1994-06-09', 'enviado', 50.00);
 insert into produto (nome, valor, pedido_id, empregado_id)
 values ('blusa caveira azul', 50.00, 1, 1);
 
+insert into produto (nome, valor, pedido_id, empregado_id)
+values ('blusa vermelha', 60.00, 1, 1);
 
+insert into produto (nome, valor, pedido_id, empregado_id)
+values ('blusa jeans', 80.00, 1, 1);
+
+insert into produto (nome, valor, pedido_id, empregado_id)
+values ('blusa moletom', 90.00, 1, 1);
+
+insert into categoria_produto (nome)
+values ('blusa colorida');
+
+insert into fornecedor_produto (cnpj, nome)
+values ('12345673450001', 'sotshirts');
